@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+
+print_r("Welcome To The Brain Games!" . PHP_EOL);
