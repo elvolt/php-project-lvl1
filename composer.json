@@ -6,5 +6,8 @@
             "email": "sidelevCS@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ]
 }
