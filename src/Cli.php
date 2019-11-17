@@ -9,5 +9,5 @@ function run()
 {
     line('Welcome to the Brain Games' . PHP_EOL);
     $name = prompt('May I have your name?');
-    line("Hello, $name");
+    line("Hello, {$name}!");
 }
