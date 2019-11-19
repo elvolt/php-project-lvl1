@@ -7,7 +7,8 @@ const START_QUESTION_EVEN = 'Answer "yes" if the number is even, otherwise answe
 function generateQuestion(): array
 {
     $num = mt_rand(1, 100);
-    return ["$num", $num];
+    $question = "$num";
+    return [$question, $num];
 }
 
 function isEven(int $num): bool
