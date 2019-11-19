@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Progression;
 
-const START_QUESTION_PROGRESSION = 'Find the greatest common divisor of given numbers.';
+const START_QUESTION_PROGRESSION = 'What number is missing in the progression?';
 const PROGRESSION_SIZE = 10;
 
 function generateProgressionAndRightAnswer($size): array

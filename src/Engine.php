@@ -30,7 +30,7 @@ function startGame(string $game): void
     while ($rightAnswersCnt < 3) {
         [$question, $rightAnswer] = call_user_func('\\BrainGames\\Games\\' . $game . '\\start');
         line("Question: {$question}");
-        $userAnswer = prompt('Your answer: ');
+        $userAnswer = prompt('Your answer');
         if ($userAnswer === $rightAnswer) {
             line('Correct!');
             $rightAnswersCnt += 1;

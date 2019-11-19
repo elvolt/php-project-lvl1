@@ -4,10 +4,29 @@
 # php-project-lvl1
 
 Установка пакета
-<a href="https://asciinema.org/a/WChnPHjspzjeRv5pshvytFkhW" target="_blank"><img src="https://asciinema.org/a/WChnPHjspzjeRv5pshvytFkhW.svg" /></a>
+
+<a href="https://asciinema.org/a/iIsomvEzZLGP9ifJtK9etEKA6" target="_blank"><img src="https://asciinema.org/a/iIsomvEzZLGP9ifJtK9etEKA6.svg" /></a>
+
 
 Игра: "Проверка на чётность"
 
-<a href="https://asciinema.org/a/1WA6hU2KDGveuv2hXzXikr6Mu" target="_blank"><img src="https://asciinema.org/a/1WA6hU2KDGveuv2hXzXikr6Mu.svg" /></a>
+<a href="https://asciinema.org/a/bVTH9ymBtI7kR0EJy3b8on0L4" target="_blank"><img src="https://asciinema.org/a/bVTH9ymBtI7kR0EJy3b8on0L4.svg" /></a>
 
 
+Игра: "Калькулятор"
+
+<a href="https://asciinema.org/a/NdBK33J2XJFUVQKQU3Kx7KTWX" target="_blank"><img src="https://asciinema.org/a/NdBK33J2XJFUVQKQU3Kx7KTWX.svg" /></a>
+
+
+Игра "НОД"
+
+<a href="https://asciinema.org/a/brFaX1AbJKUmfTy32tTaFtJBe" target="_blank"><img src="https://asciinema.org/a/brFaX1AbJKUmfTy32tTaFtJBe.svg" /></a>
+
+
+Игра "Арифметическая прогрессия"
+
+<a href="https://asciinema.org/a/uZdm7AVRYw8mwDRjPo8WNSlLp" target="_blank"><img src="https://asciinema.org/a/uZdm7AVRYw8mwDRjPo8WNSlLp.svg" /></a>
+
+Игра "Простое ли число?"
+
+<a href="https://asciinema.org/a/QcJqhTe80tF2KXfnJJA1IwQGe" target="_blank"><img src="https://asciinema.org/a/QcJqhTe80tF2KXfnJJA1IwQGe.svg" /></a>
