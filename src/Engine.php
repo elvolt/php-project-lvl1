@@ -7,6 +7,7 @@ use function cli\{line, prompt};
 use const BrainGames\Games\Even\START_QUESTION_EVEN;
 use const BrainGames\Games\Calc\START_QUESTION_CALC;
 use const BrainGames\Games\Gcd\START_QUESTION_GCD;
+use const BrainGames\Games\Progression\START_QUESTION_PROGRESSION;
 
 function startGame(string $game): void
 {
@@ -20,6 +21,9 @@ function startGame(string $game): void
             break;
         case "Gcd":
             line(START_QUESTION_GCD . PHP_EOL);
+            break;
+        case "Progression":
+            line(START_QUESTION_PROGRESSION . PHP_EOL);
             break;
     }
 
