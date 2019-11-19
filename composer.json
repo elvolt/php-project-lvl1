@@ -1,5 +1,9 @@
 {
     "name": "paul/brain-games",
+    "description": "hexlet project lvl1",
+    "type": "project",
+    "keywords": ["hexlet", "project", "games"],
+    "license": "MIT",
     "authors": [
         {
             "name": "elvolt",
@@ -7,6 +11,7 @@
         }
     ],
     "require": {
+        "php": ">=7.1.0",
         "wp-cli/php-cli-tools": "^0.11.11"
     },
     "bin": [
@@ -14,7 +19,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "autoload": {
         "files": [
@@ -23,7 +29,8 @@
             "src/games/Even.php",
             "src/games/Calc.php",
             "src/games/Gcd.php",
-            "src/games/Progression.php"
+            "src/games/Progression.php",
+            "src/games/Prime.php"
         ]
     },
     "require-dev": {
