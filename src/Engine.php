@@ -6,6 +6,7 @@ use function cli\{line, prompt};
 
 use const BrainGames\Games\Even\START_QUESTION_EVEN;
 use const BrainGames\Games\Calc\START_QUESTION_CALC;
+use const BrainGames\Games\Gcd\START_QUESTION_GCD;
 
 function startGame(string $game): void
 {
@@ -16,6 +17,9 @@ function startGame(string $game): void
             break;
         case "Calc":
             line(START_QUESTION_CALC . PHP_EOL);
+            break;
+        case "Gcd":
+            line(START_QUESTION_GCD . PHP_EOL);
             break;
     }
 
@@ -31,6 +35,7 @@ function startGame(string $game): void
             line('Correct!');
             $rightAnswersCnt += 1;
         } else {
+            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'");
             line("Let's try again, {$name}!");
             return;
         }
