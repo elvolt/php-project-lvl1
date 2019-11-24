@@ -2,38 +2,38 @@
 
 namespace BrainGames\Games\Calc;
 
-const START_QUESTION_CALC = 'What is the result of the expression?';
+use function BrainGames\Engine\startGame;
 
-function generateQuestion(): array
-{
-    $num1 = mt_rand(1, 100);
-    $num2 = mt_rand(1, 100);
-    $operators = ['+', '-', '*'];
-    $operator = $operators[array_rand($operators)];
-    $question = "{$num1} {$operator} {$num2}";
-    return [$question, $num1, $num2, $operator];
-}
+const TASK = 'What is the result of the expression?';
+const MIN_NUM = 1;
+const MAX_NUM = 100;
+const OPERATORS = ['+', '-', '*'];
 
-function findRightAnswer(int $num1, int $num2, string $operator): string
+function launchGame(): void
 {
-    $result = 0;
-    switch ($operator) {
-        case '+':
-            $result = $num1 + $num2;
-            break;
-        case '-':
-            $result = $num1 - $num2;
-            break;
-        case '*':
-            $result = $num1 * $num2;
-            break;
-    }
-    return (string)$result;
-}
+    $generateQuestionAndRightAnswer = function () {
+        $num1 = mt_rand(MIN_NUM, MAX_NUM);
+        $num2 = mt_rand(MIN_NUM, MAX_NUM);
+        $operator = OPERATORS[array_rand(OPERATORS)];
 
-function start(): array
-{
-    [$question, $num1, $num2, $operator] = generateQuestion();
-    $rightAnswer = findRightAnswer($num1, $num2, $operator);
-    return [$question, $rightAnswer];
+        $result = 0;
+        switch ($operator) {
+            case '+':
+                $result = $num1 + $num2;
+                break;
+            case '-':
+                $result = $num1 - $num2;
+                break;
+            case '*':
+                $result = $num1 * $num2;
+                break;
+        }
+
+        $rightAnswer = (string)$result;
+        $question = "{$num1} {$operator} {$num2}";
+
+        return [$question, $rightAnswer];
+    };
+
+    startGame(TASK, $generateQuestionAndRightAnswer);
 }

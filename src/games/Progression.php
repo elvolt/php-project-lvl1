@@ -2,29 +2,31 @@
 
 namespace BrainGames\Games\Progression;
 
-const START_QUESTION_PROGRESSION = 'What number is missing in the progression?';
+use function BrainGames\Engine\startGame;
+
+const TASK = 'What number is missing in the progression?';
 const PROGRESSION_SIZE = 10;
+const MIN_NUM = 1;
+const MAX_NUM = 100;
 
-function generateProgressionAndRightAnswer($size): array
+function launchGame(): void
 {
-    $start = mt_rand(0, 100);
-    $step = mt_rand(1, 10);
-    $resultArr = [];
-    $emptyIndex = mt_rand(0, $size - 1);
-    for ($cnt = 1, $i = $start; $cnt <= $size; $cnt += 1, $i += $step) {
-        $resultArr[] = (string)$i;
-    }
-    $rightAnswer = $resultArr[$emptyIndex];
-    $resultArr[$emptyIndex] = '..';
+    $generateQuestionAndRightAnswer = function () {
+        $start = mt_rand(MIN_NUM, MAX_NUM);
+        $step = mt_rand(MIN_NUM, MAX_NUM);
 
-    $resultStr = implode(' ', $resultArr);
-    return [$resultStr, $rightAnswer];
-}
+        $result = [];
+        $emptyIndex = mt_rand(0, PROGRESSION_SIZE - 1);
+        for ($count = 1, $num = $start; $count <= PROGRESSION_SIZE; $count += 1, $num += $step) {
+            $result[] = (string)$num;
+        }
 
+        $rightAnswer = $result[$emptyIndex];
+        $result[$emptyIndex] = '..';
+        $question = implode(' ', $result);
 
-function start(): array
-{
-    $size = PROGRESSION_SIZE;
-    [$question, $rightAnswer] = generateProgressionAndRightAnswer($size);
-    return [$question, $rightAnswer];
+        return [$question, $rightAnswer];
+    };
+
+    startGame(TASK, $generateQuestionAndRightAnswer);
 }
