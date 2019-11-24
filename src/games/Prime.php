@@ -2,14 +2,11 @@
 
 namespace BrainGames\Games\Prime;
 
-const START_QUESTION_PRIME = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+use function BrainGames\Engine\startGame;
 
-function generateQuestion(): array
-{
-    $num = mt_rand(1, 100);
-    $question = "$num";
-    return [$question, $num];
-}
+const TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const MIN_NUM = 1;
+const MAX_NUM = 100;
 
 function isPrime(int $num): bool
 {
@@ -26,14 +23,15 @@ function isPrime(int $num): bool
     return true;
 }
 
-function findRightAnswer(int $num): string
+function launchGame(): void
 {
-    return isPrime($num) ? 'yes' : 'no';
-}
+    $generateQuestionAndRightAnswer = function () {
+        $num = mt_rand(MIN_NUM, MAX_NUM);
+        $question = "$num";
+        $rightAnswer = isPrime($num) ? 'yes' : 'no';
 
-function start(): array
-{
-    [$question, $num] = generateQuestion();
-    $rightAnswer = findRightAnswer($num);
-    return [$question, $rightAnswer];
+        return [$question, $rightAnswer];
+    };
+
+    startGame(TASK, $generateQuestionAndRightAnswer);
 }

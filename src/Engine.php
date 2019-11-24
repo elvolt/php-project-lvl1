@@ -4,31 +4,19 @@ namespace BrainGames\Engine;
 
 use function cli\{line, prompt};
 
-use const BrainGames\Games\Even\START_QUESTION_EVEN;
-use const BrainGames\Games\Calc\START_QUESTION_CALC;
-use const BrainGames\Games\Gcd\START_QUESTION_GCD;
-use const BrainGames\Games\Progression\START_QUESTION_PROGRESSION;
-use const BrainGames\Games\Prime\START_QUESTION_PRIME;
+const RIGHT_ANSWERS_TO_WIN = 3;
 
-function startGame(string $game): void
+function startGame(string $task, callable $findQuestionAndRightAnswer): void
 {
-    $startQuestions = [
-        "Even" => START_QUESTION_EVEN,
-        "Calc" => START_QUESTION_CALC,
-        "Gcd" => START_QUESTION_GCD,
-        "Progression" => START_QUESTION_PROGRESSION,
-        "Prime" => START_QUESTION_PRIME
-    ];
-
     line('Welcome to the Brain Games!');
-    line($startQuestions[$game] . PHP_EOL);
+    line($task . PHP_EOL);
 
     $name = prompt('May I have your name?');
     line("Hello, {$name}!" . PHP_EOL);
 
     $rightAnswersCnt = 0;
-    while ($rightAnswersCnt < 3) {
-        [$question, $rightAnswer] = call_user_func('\\BrainGames\\Games\\' . $game . '\\start');
+    while ($rightAnswersCnt < RIGHT_ANSWERS_TO_WIN) {
+        [$question, $rightAnswer] = $findQuestionAndRightAnswer();
         line("Question: {$question}");
         $userAnswer = prompt('Your answer');
         if ($userAnswer === $rightAnswer) {
