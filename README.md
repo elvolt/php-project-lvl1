@@ -10,23 +10,23 @@
 
 Игра: "Проверка на чётность"
 
-<a href="https://asciinema.org/a/bVTH9ymBtI7kR0EJy3b8on0L4" target="_blank"><img src="https://asciinema.org/a/bVTH9ymBtI7kR0EJy3b8on0L4.svg" /></a>
+<a href="https://asciinema.org/a/tfoRSO9rXtcW0jK33mcmGBAPw" target="_blank"><img src="https://asciinema.org/a/tfoRSO9rXtcW0jK33mcmGBAPw.svg" /></a>
 
 
 Игра: "Калькулятор"
 
-<a href="https://asciinema.org/a/NdBK33J2XJFUVQKQU3Kx7KTWX" target="_blank"><img src="https://asciinema.org/a/NdBK33J2XJFUVQKQU3Kx7KTWX.svg" /></a>
+<a href="https://asciinema.org/a/7SAy6PL5sVArFaMOH9t5lEVpv" target="_blank"><img src="https://asciinema.org/a/7SAy6PL5sVArFaMOH9t5lEVpv.svg" /></a>
 
 
 Игра "НОД"
 
-<a href="https://asciinema.org/a/brFaX1AbJKUmfTy32tTaFtJBe" target="_blank"><img src="https://asciinema.org/a/brFaX1AbJKUmfTy32tTaFtJBe.svg" /></a>
+<a href="https://asciinema.org/a/HX3abLb9GxLlHfYBdPldMxVYf" target="_blank"><img src="https://asciinema.org/a/HX3abLb9GxLlHfYBdPldMxVYf.svg" /></a>
 
 
 Игра "Арифметическая прогрессия"
 
-<a href="https://asciinema.org/a/uZdm7AVRYw8mwDRjPo8WNSlLp" target="_blank"><img src="https://asciinema.org/a/uZdm7AVRYw8mwDRjPo8WNSlLp.svg" /></a>
+<a href="https://asciinema.org/a/58VHUrQOB8HtFOWnw5C4pERg4" target="_blank"><img src="https://asciinema.org/a/58VHUrQOB8HtFOWnw5C4pERg4.svg" /></a>
 
 Игра "Простое ли число?"
 
-<a href="https://asciinema.org/a/QcJqhTe80tF2KXfnJJA1IwQGe" target="_blank"><img src="https://asciinema.org/a/QcJqhTe80tF2KXfnJJA1IwQGe.svg" /></a>
+<a href="https://asciinema.org/a/Rx5srk1JKcYAALRXfpRqiGb3A" target="_blank"><img src="https://asciinema.org/a/Rx5srk1JKcYAALRXfpRqiGb3A.svg" /></a>
