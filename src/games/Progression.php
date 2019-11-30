@@ -17,8 +17,8 @@ function launchGame(): void
 
         $result = [];
         $emptyIndex = mt_rand(0, PROGRESSION_SIZE - 1);
-        for ($count = 1, $num = $start; $count <= PROGRESSION_SIZE; $count += 1, $num += $step) {
-            $result[] = (string)$num;
+        for ($count = 1, $current = $start; $count <= PROGRESSION_SIZE; $count += 1, $current += $step) {
+            $result[] = $current;
         }
 
         $rightAnswer = $result[$emptyIndex];

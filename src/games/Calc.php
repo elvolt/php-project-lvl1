@@ -29,7 +29,7 @@ function launchGame(): void
                 break;
         }
 
-        $rightAnswer = (string)$result;
+        $rightAnswer = $result;
         $question = "{$num1} {$operator} {$num2}";
 
         return [$question, $rightAnswer];
