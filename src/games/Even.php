@@ -16,9 +16,8 @@ function isEven(int $num): bool
 function launchGame(): void
 {
     $generateQuestionAndRightAnswer = function () {
-        $num = mt_rand(MIN_NUM, MAX_NUM);
-        $question = "$num";
-        $rightAnswer = isEven($num) ? 'yes' : 'no';
+        $question = mt_rand(MIN_NUM, MAX_NUM);
+        $rightAnswer = isEven($question) ? 'yes' : 'no';
 
         return [$question, $rightAnswer];
     };

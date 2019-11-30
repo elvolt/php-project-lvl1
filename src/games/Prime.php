@@ -26,9 +26,8 @@ function isPrime(int $num): bool
 function launchGame(): void
 {
     $generateQuestionAndRightAnswer = function () {
-        $num = mt_rand(MIN_NUM, MAX_NUM);
-        $question = "$num";
-        $rightAnswer = isPrime($num) ? 'yes' : 'no';
+        $question = mt_rand(MIN_NUM, MAX_NUM);
+        $rightAnswer = isPrime($question) ? 'yes' : 'no';
 
         return [$question, $rightAnswer];
     };
