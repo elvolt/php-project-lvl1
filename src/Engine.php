@@ -14,11 +14,11 @@ function startGame(string $task, callable $findQuestionAndRightAnswer): void
     $name = prompt('May I have your name?');
     line("Hello, {$name}!" . PHP_EOL);
 
-    for ($rightAnswersCnt = 0; $rightAnswersCnt < RIGHT_ANSWERS_TO_WIN; $rightAnswersCnt += 1) {
+    for ($i = 0; $i < RIGHT_ANSWERS_TO_WIN; $i += 1) {
         [$question, $rightAnswer] = $findQuestionAndRightAnswer();
         line("Question: {$question}");
         $userAnswer = prompt('Your answer');
-        if ($userAnswer === (string)$rightAnswer) {
+        if ($userAnswer === $rightAnswer) {
             line('Correct!');
         } else {
             line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'");

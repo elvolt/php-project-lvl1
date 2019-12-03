@@ -16,23 +16,21 @@ function launchGame(): void
         $num2 = mt_rand(MIN_NUM, MAX_NUM);
         $operator = OPERATORS[array_rand(OPERATORS)];
 
-        $result = 0;
         switch ($operator) {
             case '+':
-                $result = $num1 + $num2;
+                $rightAnswer = $num1 + $num2;
                 break;
             case '-':
-                $result = $num1 - $num2;
+                $rightAnswer = $num1 - $num2;
                 break;
             case '*':
-                $result = $num1 * $num2;
+                $rightAnswer = $num1 * $num2;
                 break;
         }
 
-        $rightAnswer = $result;
         $question = "{$num1} {$operator} {$num2}";
 
-        return [$question, $rightAnswer];
+        return [$question, (string)$rightAnswer];
     };
 
     startGame(TASK, $generateQuestionAndRightAnswer);

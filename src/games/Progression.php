@@ -15,17 +15,17 @@ function launchGame(): void
         $start = mt_rand(MIN_NUM, MAX_NUM);
         $step = mt_rand(MIN_NUM, MAX_NUM);
 
-        $result = [];
-        $emptyIndex = mt_rand(0, PROGRESSION_SIZE - 1);
+        $progression = [];
+        $hiddenElementIndex = mt_rand(0, PROGRESSION_SIZE - 1);
         for ($count = 1, $current = $start; $count <= PROGRESSION_SIZE; $count += 1, $current += $step) {
-            $result[] = $current;
+            $progression[] = $current;
         }
 
-        $rightAnswer = $result[$emptyIndex];
-        $result[$emptyIndex] = '..';
-        $question = implode(' ', $result);
+        $rightAnswer = $progression[$hiddenElementIndex];
+        $progression[$hiddenElementIndex] = '..';
+        $question = implode(' ', $progression);
 
-        return [$question, $rightAnswer];
+        return [$question, (string)$rightAnswer];
     };
 
     startGame(TASK, $generateQuestionAndRightAnswer);

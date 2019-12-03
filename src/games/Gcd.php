@@ -26,7 +26,7 @@ function launchGame(): void
 
         $rightAnswer = findGCD($num1, $num2);
         $question = "{$num1} {$num2}";
-        return [$question, $rightAnswer];
+        return [$question, (string)$rightAnswer];
     };
 
     startGame(TASK, $generateQuestionAndRightAnswer);
